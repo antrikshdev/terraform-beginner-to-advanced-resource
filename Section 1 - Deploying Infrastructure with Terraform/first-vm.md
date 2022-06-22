@@ -6,20 +6,22 @@ Note that every region has a different AMI ID. The AMI ID's keeps on changing so
 
 https://registry.terraform.io/
 
-https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 
 ### first_ec2.tf
 
 ```sh
-provider "aws" {
-  region     = "us-west-2"
-  access_key = "PUT-YOUR-ACCESS-KEY-HERE"
-  secret_key = "PUT-YOUR-SECRET-KEY-HERE"
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.10.0"
+    }
+  }
 }
 
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
-   instance_type = "t2.micro"
+provider "azurerm" {
+  # Configuration options
 }
 ```
 ### Commands:
