@@ -6,8 +6,6 @@ Note that every region has a different AMI ID. The AMI ID's keeps on changing so
 
 https://registry.terraform.io/
 
-https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
-
 ### first_ec2.tf
 
 ```sh
